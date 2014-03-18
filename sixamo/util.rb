@@ -2,7 +2,7 @@ module Sixamo
   module Util
     def self.roulette_select(h)
       return nil if h.empty?
-      sum = h.values.sum
+      sum = h.values.inject(:+)
       return h.keys.sample if sum == 0
       r = rand * sum
 
@@ -136,11 +136,11 @@ module Sixamo
         terms = trie.split_into_terms(str).uniq
         result_hash[str] = terms.map do |kw|
           keywords[kw]
-        end.sum || 0
+        end.inject(:+) || 0
       end
 
       if $DEBUG
-        sum = result_hash.values.sum.to_f
+        sum = result_hash.values.inject(:+).to_f
         tmp = result_hash.sort_by { |k, v| [-v, k] }
         puts "-(候補数: #{result_hash.size})----"
 

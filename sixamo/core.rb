@@ -27,7 +27,7 @@ module Sixamo
       end
 
       if $DEBUG
-        sum = keywords.values.sum
+        sum = keywords.values.inject(:+)
         tmp = keywords.sort_by { |k, v| [-v, k] }
         puts "-(term)----"
 
@@ -55,7 +55,7 @@ module Sixamo
             keywords.delete(k)
           end
         end
-        sum = keywords.values.sum
+        sum = keywords.values.inject(:+)
         if sum > 0
           keywords.each { |k, v| keywords[k] = v / sum }
         end
