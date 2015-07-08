@@ -1,9 +1,9 @@
 sixamo
 ======
 
-[![Code Climate](https://codeclimate.com/github/hadzimme/sixamo.png)][codeclimate]
+[![Code Climate](https://codeclimate.com/github/hadzimme/sixamo/badges/gpa.svg)][gpa]
 
-[codeclimate]: https://codeclimate.com/github/hadzimme/sixamo
+[gpa]: https://codeclimate.com/github/hadzimme/sixamo
 
 sixamo.rbのコードリーディング＆リファクタリング用
 
