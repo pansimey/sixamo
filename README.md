@@ -1,4 +1,4 @@
-sixamo
+Sixamo
 ======
 
 [![Code Climate](https://codeclimate.com/github/hadzimme/sixamo/badges/gpa.svg)][gpa]
